@@ -2,76 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">  
   <title>Frontend Mentor | Recipe page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
   </style>
 </head>
 <body>
 
-  Simple Omelette Recipe
-
-  An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
-  to perfection, optionally filled with your choice of cheese, vegetables, or meats.
-
-  Preparation time
-
-  Total: Approximately 10 minutes
-  Preparation: 5 minutes
-  Cooking: 5 minutes
-
-  Ingredients
-
-  2-3 large eggs
-  Salt, to taste
-  Pepper, to taste
-  1 tablespoon of butter or oil
-  Optional fillings: cheese, diced vegetables, cooked meats, herbs
-
-  Instructions
-
-  Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
-  You can add a tablespoon of water or milk for a fluffier texture.
-
-  Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
-
-  Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
-  the eggs evenly coat the surface.
-
-  Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
-  middle, sprinkle your chosen fillings over one half of the omelette.
-
-  Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
-  fillings. Let it cook for another minute, then slide it onto a plate.
-
-  Enjoy: Serve hot, with additional salt and pepper if needed.
-
-  Nutrition
-
-  The table below shows nutritional values per serving without the additional fillings.
-
-  Calories
-  277kcal
-
-  Carbs
-  0g
-
-  Protein
-  20g
-
-  Fat
-  22g
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="tog-con">
+    <button class="toggle" id="toggle" onclick="toggle()">toggle</button>
   </div>
+
+  <img src="./design/mobile-design.jpg" alt="reference image" class="reference hidden" id="reference" width="375px">
+
+  <main class="main-container">
+
+    <div class="card">
+      <img src="./assets/images/image-omelette.jpeg" alt="omelette image" class="omelette-img">
+
+      <div class="recipe-brief">
+        <h1 class="recipe-title section-title">
+          Simple Omelette Recipe
+        </h1>
+        <p class="recipe-description">
+          An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+          to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+        </p>
+  
+        <div class="recipe-preparation-container">
+          <h3 class="rp-time-title">
+            Preparation time
+          </h3>
+  
+          <ul class="rp-time-list">
+            <li class="time-total rpt-list-item">
+              <strong>Total: </strong> Approximately 10 minutes
+            </li>
+            <li class="time-preparation rpt-list-item">
+              <strong>Preparation: </strong> 5 minutes
+            </li>
+            <li class="time-cooking rpt-list-item">
+              <strong>Cooking: </strong> 5 minutes
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <article class="recipe-information">
+
+        <section class="ingredients">
+
+          <h2 class="ingredients-title section-title">
+            Ingredients
+          </h2>
+
+          <ul class="ingredients-list section-list">
+            <li class="ingredient section-list-element">
+              2-3 large eggs
+            </li>
+            <li class="ingredient section-list-element">
+              Salt, to taste
+            </li>
+            <li class="ingredient section-list-element">
+              Pepper, to taste
+            </li>
+            <li class="ingredient section-list-element">            
+              1 tablespoon of butter or oil
+            </li>
+            <li class="ingredient section-list-element">
+              Optional fillings: cheese, diced vegetables, cooked meats, herbs
+            </li>
+          </ul>
+        </section>
+
+        <section class="instructions">
+
+          <h2 class="instructions-title section-title">
+            Instructions
+          </h2>
+
+          <ol class="instructions-list section-list"></ol>
+            <li class="instruction section-list-element">
+              Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.
+            </li>
+            <li class="instruction section-list-element">
+              Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
+            </li>
+            <li class="instruction section-list-element">
+              Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
+            </li>
+            <li class="instruction section-list-element">            
+              Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.
+            </li>
+            <li class="instruction section-list-element">
+              Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.
+            </li>
+            <li class="instruction section-list-element"></li>
+            Enjoy: Serve hot, with additional salt and pepper if needed.
+            </li>
+          </ul>
+
+        </section>
+
+        <section class="nutrition">
+          <h2 class="nutrition-title section-title">
+            Nutrition
+          </h2>
+
+          <p class="nutrition-table-description">
+            The table below shows nutritional values per serving without the additional fillings.
+          </p>
+
+          <table class="nutrition-table">
+            <tr class="nutrition-table-row">
+              <th class="nutrition-table-column table-header">Calories</th>
+              <td class="nutrition-table-column">277kcal</td>
+            </tr>
+            <tr class="nutrition-table-row">
+              <th class="nutrition-table-column table-header">Carbs</th>
+              <td class="nutrition-table-column">0g</td>
+            </tr>
+            <tr class="nutrition-table-row">
+              <th class="nutrition-table-column table-header">Protein</th>
+              <td class="nutrition-table-column">20g</td>
+            </tr>
+            <tr class="nutrition-table-row">
+              <th class="nutrition-table-column table-header">Fat</th>
+              <td class="nutrition-table-column">22g</td>
+            </tr>
+          </table>
+        </section>
+      </article>
+    </card>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="attribution-link" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.github.com/8NeoN8" class="attribution-link" target="_blank">AGDevs</a>.
+    </footer>
+
+  </main>
+
+  <script>
+
+    function toggle(){
+      let reference = document.getElementById('reference')
+      if(reference.classList.contains('hidden')){
+        reference.classList.remove('hidden')
+      }else reference.classList.add('hidden')
+    }
+
+  </script>
+  
 </body>
 </html>
