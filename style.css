@@ -65,7 +65,7 @@
 }
 
 .recipe-brief{
-  padding: 2rem;
+  padding: 1.9rem;
   padding-top: 2.2rem;
   padding-bottom: 0;  
 }
@@ -138,7 +138,130 @@
 
 .ingredients-title{
   font-size: 1.75rem;
+  margin-bottom: 1.2rem;
 }
+
+.section-list{
+  padding-left: 2.5rem;
+  align-items:baseline;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  list-style: none;
+  margin-bottom: 3.1rem;
+}
+
+.section-list-element{
+  margin-bottom: 0.6rem;
+  width: 100%;
+  line-height: 1.4rem;
+}
+
+.ingredient::before{
+  content: '•';
+  position: absolute;
+  left: -2.14rem;
+  font-size: 1.5rem;
+}
+
+.ingredient:nth-child(5)::before{
+  top: 28%;
+}
+
+.ingredient:nth-child(5){
+  line-height: 1.5rem;
+}
+
+.instructions{
+}
+
+.instructions-title{
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.instructions-list{
+}
+
+.instruction{
+  line-height: 1.5rem;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.instruction::before{
+  content: '1.';
+  position: absolute;
+  left: -2.1rem;
+  font-size: 1rem;
+}
+
+.instruction:nth-child(2):before{
+  content: '2.';
+}
+
+.instruction:nth-child(3):before{
+  content: '3.';
+  top: 0;
+}
+
+.instruction:nth-child(3):before{
+  content: '3.';
+}
+
+.instruction:nth-child(4):before{
+  content: '4.';
+}
+
+.instruction:nth-child(5):before{
+  content: '5.';
+}
+
+.instruction:nth-child(6):before{
+  content: '6.';  
+}
+
+.nutrition{
+  height: 20rem;
+}
+
+.nutrition-title{
+  font-size: 1.75rem;
+  margin-bottom: 1.2rem;
+}
+
+.nutrition-table-description{
+  line-height: 1.5rem;
+}
+
+.nutrition-table{
+  width: 100%;
+  height: 70%;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+
+.nutrition-table-row{
+  border-bottom: 1px var(--Brown-800);
+  text-align: left ;
+  padding: 2rem;
+}
+
+.nutrition-table-column{
+  padding-left: 1.8rem;
+}
+.table-header{
+  padding-right: 2rem;
+}
+
+.table-header{
+  color: var(--Brown-800);
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
 
 
 @media screen and (max-width: 580px) {
